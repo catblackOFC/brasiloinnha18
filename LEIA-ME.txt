@@ -1,0 +1,73 @@
+==========================================================
+  SITE +18 — BRASIL OINNHA  •  INSTRUÇÕES
+==========================================================
+
+O QUE ESTÁ AQUI
+  - Site completo e pronto, sem dependência de Netlify.
+  - 17 fotos em HD + miniaturas leves para carregamento rápido.
+  - 5 vídeos em HD com capas (posters) próprias.
+  - Design "dark premium": capa de impacto, galeria em faixa
+    horizontal com prévia borrada e cadeado, seção de vídeos.
+
+COMO FUNCIONA
+  1. Porta de idade (+18) na abertura. A resposta fica lembrada no navegador.
+  2. Antes do cadastro: tudo aparece BORRADO com cadeado (prévia).
+     Clicar em qualquer foto/vídeo abre o cadastro.
+  3. Cadastro FAKE: só e-mail + senha (mínimo 6 caracteres).
+     Não envia nada a lugar nenhum; fica guardado no localStorage
+     do navegador. Depois de criar a conta, tudo desbloqueia
+     com animação suave, e o nome do e-mail aparece no topo.
+  4. Botão "Sair" devolve o site ao estado borrado (útil pra testar).
+  5. Fotos abrem num lightbox grande (setas do teclado funcionam);
+     vídeos tocam direto no player, também dentro do lightbox.
+
+TESTANDO RÁPIDO (sem hospedar)
+  - Dê dois cliques no index.html e abra no Chrome/Edge/Safari/Firefox.
+  - Funciona 100% offline, até de file://.
+
+PUBLICAR (fora do Netlify — qualquer hospedagem estática serve)
+  Opções baratas/grátis no Brasil: Hostinger, HostGator, Pelophant,
+  InfinityFree, ou até uma VPS simples.
+  Passos:
+   1. Entre no painel da hospedagem e vá no Gerenciador de Arquivos
+      (ou use um FTP como o FileZilla).
+   2. Entre na pasta pública: public_html/ (ou htdocs/).
+   3. Envie o CONTEÚDO desta pasta (index.html, css/, js/, img/,
+      videos/, posters/) — não a pasta inteira, os arquivos dentro dela.
+  Pronto: seu domínio (ex.: seudominio.com.br) abre o site.
+  Dica: ative o SSL/certificado gratuito da hospedagem pra ter https://.
+  Espaço necessário: ~30 MB.
+
+COMO ADICIONAR MAIS FOTOS DEPOIS (passo a passo)
+  1. Copie a foto .jpg para a pasta img/ (ex.: foto-18.jpg).
+  2. Crie a miniatura: uma cópia reduzida, largura máxima de 480 px,
+     mesma pasta img/thumb/ com o MESMO nome (foto-18.jpg).
+     Qualquer programa serve (no celular: o app "Miniatura/Imagem",
+     no PC: reduza e exporte como JPG).
+  3. Edite js/app.js: dentro da lista FOTOS, adicione uma linha no final,
+     seguindo o modelo:
+        { src: "img/foto-18.jpg", thumb: "img/thumb/foto-18.jpg" },
+  4. Salve e envie os arquivos novos + o app.js atualizado para a hospedagem.
+  O contador do topo se ajusta sozinho.
+
+COMO ADICIONAR MAIS VÍDEOS DEPOIS
+  1. Copie o .mp4 para videos/ (ex.: video-6.mp4).
+  2. Tire 1 quadro do meio do vídeo (qualquer editor) e salve como
+     posters/video-6.jpg (JPG, não precisa ser grande).
+  3. Edite js/app.js, na lista VIDEOS:
+        { src: "videos/video-6.mp4", poster: "posters/video-6.jpg", dur: "xx s" },
+     ("dur" é só o texto do selo de duração, ex.: "42 s").
+
+TROCAR O NOME DA MODELA
+  Busque e substitua "Brasiloinnha" nos arquivos index.html e css
+  (aparece no topo, título, capa, rodapé e metadados de SEO).
+
+TROCAR A FOTO DA CAPA
+  Edite index.html: na <div class="hero-bg"> troque src="img/foto-15.jpg"
+  pela foto que preferir. Também pode trocar a og:image do <head>.
+
+FICHA TÉCNICA
+  - HTML + CSS + JavaScript puros. Zero dependências externas
+    (sem CDN, sem fonte externa, sem rede) → abre rápido e offline.
+  - Responsivo (celular em primeiro lugar).
+  - Peso total do pacote: ~29 MB (quase todo em vídeo).

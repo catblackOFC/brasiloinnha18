@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0b0e">
+<title>Brasiloinnha | Fotos &amp; Vídeos Exclusivos +18</title>
+<meta name="description" content="Brasiloinnha — galeria de fotos e vídeos exclusivos para maiores de 18 anos. Prévia aberta, conteúdo completo com cadastro gratuito.">
+<meta property="og:title" content="Brasiloinnha | +18 Exclusivo">
+<meta property="og:description" content="Fotos e vídeos exclusivos. Cadastre-se grátis para desbloquear.">
+<meta property="og:image" content="img/thumb/foto-15.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23f2b64b'/%3E%3Ctext x='32' y='42' font-size='30' text-anchor='middle' font-family='Georgia' font-weight='bold' fill='%230b0b0e'%3E18%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="locked">
+
+<!-- ================= PORTA DE IDADE ================= -->
+<div id="agegate" class="gate" aria-hidden="false">
+  <div class="gate-card">
+    <div class="gate-badge">+18</div>
+    <h1>Conteúdo para adultos</h1>
+    <p>Este site contém fotos e vídeos <strong>+18</strong>. Para continuar, confirme que você tem pelo menos 18 anos.</p>
+    <div class="gate-btns">
+      <button id="gateYes" class="btn btn-gold">Tenho 18 anos ou mais</button>
+      <a id="gateNo" class="btn btn-ghost" href="https://www.google.com">Sou menor de idade</a>
+    </div>
+    <small>Ao entrar você concorda em ver conteúdo adulto.</small>
+  </div>
+</div>
+
+<!-- ================= TOPO ================= -->
+<header class="top">
+  <div class="brand"><span class="brand-dot"></span> Brasiloinnha <span class="tag18">+18</span></div>
+  <div class="top-right">
+    <span id="userchip" class="userchip" hidden><span class="dot"></span><span id="usermail"></span></span>
+    <button id="enterBtn" class="btn btn-gold btn-sm">Entrar / Cadastrar</button>
+    <button id="logoutBtn" class="btn btn-ghost btn-sm" hidden>Sair</button>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="hero-bg"><img src="img/foto-15.jpg" alt=""></div>
+  <div class="hero-shade"></div>
+  <div class="hero-in">
+    <span class="hero-kicker">PÁGINA OFICIAL DE FÃ • CONTEÚDO EXCLUSIVO</span>
+    <h1>Brasiloinnha</h1>
+    <p class="hero-sub">Fotos e vídeos exclusivos, direto do perfil da modelo.<br>Cadastre grátis e desbloqueie tudo.</p>
+    <div class="hero-cta">
+      <button class="btn btn-gold" data-openmodal>Desbloquear tudo 🔓</button>
+      <a class="btn btn-ghost" href="#preview">Ver prévia borrada</a>
+    </div>
+    <div class="stats">
+      <div class="stat"><b id="stFotos">–</b><span>fotos HD</span></div>
+      <div class="stat"><b id="stVideos">–</b><span>vídeos</span></div>
+      <div class="stat"><b>R$ 0</b><span>para sempre</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PRÉVIA / GALERIA ================= -->
+<main>
+<section class="section" id="preview">
+  <div class="sec-head">
+    <h2>Galeria de fotos</h2>
+    <span class="chip chip-lock" id="chipFotos">🔒 desbloqueie para ver em HD</span>
+  </div>
+  <p class="sec-sub">Dá para espiar: a prévia fica borrada até você criar a conta gratuita.</p>
+  <div class="strip" id="strip"></div>
+</section>
+
+<!-- ================= VÍDEOS ================= -->
+<section class="section" id="videos">
+  <div class="sec-head">
+    <h2>Vídeos exclusivos</h2>
+    <span class="chip chip-lock" id="chipVideos">🔒 desbloqueie para assistir</span>
+  </div>
+  <p class="sec-sub">Vídeos na íntegra, em HD, tocando direto no site.</p>
+  <div class="vgrid" id="vgrid"></div>
+</section>
+</main>
+
+<!-- ================= RODAPÉ ================= -->
+<footer class="foot">
+  <div class="foot-brand">Brasiloinnha <span class="tag18">+18</span></div>
+  <p>Página de fã não oficial. Conteúdo adulto destinado a maiores de 18 anos.<br>Os direitos das imagens e vídeos pertencem à modelo.</p>
+  <p class="foot-copy">© <span id="ano"></span> Brasiloinnha • Feito com ♥</p>
+</footer>
+
+<!-- ================= MODAL DE CADASTRO (FAKE) ================= -->
+<div id="signup" class="modal" hidden>
+  <div class="card">
+    <button class="x" id="closeSignup" aria-label="Fechar">✕</button>
+    <div class="card-badge">🔓</div>
+    <h3>Desbloquear tudo</h3>
+    <p class="card-sub">Crie sua conta gratuita e veja todas as fotos em HD e os vídeos completos.</p>
+    <form id="formSignup">
+      <label>E-mail
+        <input type="email" id="inEmail" placeholder="voce@email.com" required autocomplete="email">
+      </label>
+      <label>Senha
+        <input type="password" id="inPass" placeholder="mínimo 6 caracteres" minlength="6" required autocomplete="new-password">
+      </label>
+      <button type="submit" class="btn btn-gold btn-block">Criar conta gratuita</button>
+    </form>
+    <small class="card-note">Sem spam, sem cobrança. Seus dados ficam guardados apenas no seu navegador.</small>
+  </div>
+</div>
+
+<!-- ================= LIGHTBOX ================= -->
+<div id="lightbox" class="lightbox" hidden>
+  <button class="lb-btn lb-close" id="lbClose" aria-label="Fechar">✕</button>
+  <button class="lb-btn lb-prev" id="lbPrev" aria-label="Anterior">‹</button>
+  <div class="lb-stage" id="lbStage"></div>
+  <button class="lb-btn lb-next" id="lbNext" aria-label="Próxima">›</button>
+  <div class="lb-bar" id="lbCap"></div>
+</div>
+
+<div id="toast" class="toast"></div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
